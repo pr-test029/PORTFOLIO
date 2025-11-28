@@ -1,0 +1,7 @@
+{
+  "name": "NDAMBA GOSSAKI Portfolio",
+  "description": "Portofolio professionnel de NDAMBA GOSSAKI Paul Roger, Gestionnaire RH et Développeur Full-Stack, avec un thème aérien et une intégration IA Gemini.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
