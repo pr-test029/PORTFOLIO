@@ -5,6 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NDAMBA GOSSAKI Paul Roger - Portfolio</title>
     
+    <script>
+        // Fix for "Cannot set property fetch of #<Window> which has only a getter"
+        // This occurs when polyfills try to overwrite window.fetch in environments where it is read-only.
+        (function() {
+            const g = typeof globalThis !== 'undefined' ? globalThis : window;
+            try {
+                const desc = Object.getOwnPropertyDescriptor(g, 'fetch');
+                if (desc && desc.configurable && !desc.set) {
+                    const originalFetch = g.fetch;
+                    Object.defineProperty(g, 'fetch', {
+                        configurable: true,
+                        enumerable: true,
+                        get: function() { return originalFetch; },
+                        set: function(v) { 
+                            console.warn('Attempted to overwrite fetch, ignoring.');
+                        }
+                    });
+                }
+            } catch (e) {}
+            
+            // Create a safe global proxy for Vite's 'global' definition
+            window.__SAFE_GLOBAL__ = new Proxy(g, {
+                set(target, prop, value) {
+                    if (prop === 'fetch') {
+                        console.warn('Global fetch overwrite attempted, ignoring.');
+                        return true;
+                    }
+                    try {
+                        target[prop] = value;
+                    } catch (e) {
+                        console.warn(`Failed to set global property "${String(prop)}":`, e);
+                    }
+                    return true;
+                },
+                get(target, prop) {
+                    const val = target[prop];
+                    if (typeof val === 'function' && !val.prototype) {
+                        try {
+                            return val.bind(target);
+                        } catch (e) {
+                            return val;
+                        }
+                    }
+                    return val;
+                }
+            });
+        })();
+    </script>
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
