@@ -27,7 +27,7 @@ const TiltCard = ({ children }: { children: React.ReactNode }) => {
 
 const Home: React.FC = () => {
   return (
-    <div className="min-h-[calc(100vh-120px)] flex flex-col justify-center relative">
+    <div className="min-h-[calc(100vh-160px)] flex flex-col justify-center relative">
       <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
         
         {/* Text Content */}

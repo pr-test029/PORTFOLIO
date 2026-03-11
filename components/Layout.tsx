@@ -37,7 +37,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <div className="min-h-screen bg-slate-50 relative overflow-hidden font-sans text-slate-800 selection:bg-sky-500 selection:text-white">
+    <div className="min-h-screen bg-slate-50 relative overflow-x-hidden font-sans text-slate-800 selection:bg-sky-500 selection:text-white">
       
       {/* --- Dynamic Animated Sky Background --- */}
       <motion.div 
