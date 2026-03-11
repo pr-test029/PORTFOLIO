@@ -1,8 +1,19 @@
 import { GoogleGenAI, Chat } from "@google/genai";
 
-// Initialize Gemini Client
-// We assume process.env.API_KEY is available
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// Initialize Gemini Client lazily to prevent top-level crashes if API key is missing
+let aiInstance: GoogleGenAI | null = null;
+
+const getAIInstance = () => {
+  if (!aiInstance) {
+    const apiKey = process.env.GEMINI_API_KEY || process.env.API_KEY;
+    if (!apiKey) {
+      console.warn("GEMINI_API_KEY is missing. AI features will be disabled.");
+      return null;
+    }
+    aiInstance = new GoogleGenAI({ apiKey });
+  }
+  return aiInstance;
+};
 
 const SYSTEM_INSTRUCTION = `
 You are the interactive AI assistant for NDAMBA GOSSAKI Paul Roger's portfolio website. 
@@ -19,7 +30,10 @@ Be helpful, professional, and concise. If asked about location, use the googleMa
 Always answer in the language the user speaks to you (French or English).
 `;
 
-export const createChatSession = (): Chat => {
+export const createChatSession = (): Chat | null => {
+  const ai = getAIInstance();
+  if (!ai) return null;
+  
   return ai.chats.create({
     model: 'gemini-2.5-flash',
     config: {
