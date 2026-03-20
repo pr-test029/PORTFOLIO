@@ -25,11 +25,11 @@ const About: React.FC = () => {
                 </div>
                 <p className="text-lg text-slate-600 leading-relaxed mb-6">
                     Je suis <strong className="text-slate-900 bg-sky-100 px-1 rounded">NDAMBA GOSSAKI Paul Roger</strong>. 
-                    Ma passion réside à l'intersection de l'humain et du numérique. 
-                    Diplômé en gestion et autodidacte acharné en technologie, j'ai développé une double compétence rare.
+                    Ma passion réside dans le développement de solutions numériques à fort impact social. 
+                    Spécialisé dans les technologies web modernes, je m'efforce de créer des outils qui favorisent l'engagement citoyen et le développement local.
                 </p>
                 <p className="text-lg text-slate-600 leading-relaxed">
-                    Je ne me contente pas de coder ou de gérer ; je construis des ponts. Que ce soit pour optimiser un processus RH ou déployer une application complexe, mon objectif reste le même : <span className="font-semibold text-sky-600">L'efficacité par l'innovation.</span>
+                    Mon approche combine rigueur technique et vision stratégique pour transformer des idées complexes en plateformes accessibles et performantes.
                 </p>
             </motion.div>
 
@@ -41,22 +41,10 @@ const About: React.FC = () => {
                 <div className="relative border-l-2 border-sky-100 ml-4 space-y-12">
                     {[
                         { 
-                            year: '2025 - Présent', 
-                            role: 'Gestionnaire des RH', 
-                            company: 'Collectif LAMUKA', 
-                            desc: 'Pilotage stratégique des ressources humaines, optimisation des processus de recrutement et développement des talents.' 
-                        },
-                        { 
-                            year: '2023 - Présent', 
-                            role: 'CEO & Fondateur', 
-                            company: 'Best GRAPHIC', 
-                            desc: 'Direction d\'une agence digitale. Supervision de projets web, design graphique et intégration de solutions IA pour divers clients.' 
-                        },
-                        { 
-                            year: '2022 - 2023', 
-                            role: 'Stagiaire Polyvalent', 
-                            company: 'ARTF Congo', 
-                            desc: 'Immersion complète dans les départements Informatique et RH. Contribution à la digitalisation des dossiers du personnel.' 
+                            year: 'Année - Présent', 
+                            role: '[Votre Poste]', 
+                            company: '[Votre Entreprise]', 
+                            desc: '[Description de vos responsabilités et accomplissements réels.]' 
                         }
                     ].map((item, idx) => (
                         <motion.div 
@@ -93,9 +81,7 @@ const About: React.FC = () => {
                 </h3>
                 <div className="space-y-6 relative z-10">
                      {[
-                        { title: 'Dev. Logiciels', school: 'Les Chevaliers du net', year: 'En cours', color: 'text-yellow-400' },
-                        { title: 'Web Master & Design', school: 'Skill Academy (MTN)', year: '2025', color: 'text-green-400' },
-                        { title: 'Licence Gestion', school: 'E.S.G.A.E', year: '2022-2025', color: 'text-sky-400' },
+                        { title: '[Votre Diplôme]', school: '[Votre École]', year: '[Année]', color: 'text-sky-400' },
                     ].map((edu, idx) => (
                         <div key={idx} className="pb-4 border-b border-white/10 last:border-0 last:pb-0">
                             <h4 className={`font-bold ${edu.color}`}>{edu.title}</h4>
@@ -113,10 +99,10 @@ const About: React.FC = () => {
                 className="bg-gradient-to-br from-sky-400 to-blue-600 rounded-[2rem] p-8 text-white shadow-lg text-center"
             >
                 <Award size={48} className="mx-auto mb-4 text-white/80" />
-                <div className="text-5xl font-black mb-2">100%</div>
-                <p className="text-sky-100 font-medium">Engagement Client</p>
+                <div className="text-5xl font-black mb-2">?</div>
+                <p className="text-sky-100 font-medium">Statistique Réelle</p>
                 <p className="text-xs text-sky-200 mt-4 opacity-80">
-                    Chaque projet est traité avec la plus haute priorité et rigueur.
+                    [Description de votre engagement ou d'un chiffre clé.]
                 </p>
             </motion.div>
         </div>

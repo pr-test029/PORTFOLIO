@@ -1,45 +1,33 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Bot, Code, Palette, Users, Video, Map, ArrowUpRight } from 'lucide-react';
+import { Bot, Code, Palette, Users, Video, Map, ArrowUpRight, Cpu } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
     {
-      title: 'Chatbots WhatsApp',
-      desc: 'Automatisation intelligente du service client et gestion des commandes 24/7.',
+      title: 'Plateformes Citoyennes',
+      desc: 'Conception de solutions numériques pour favoriser l\'engagement et la participation active au développement local.',
+      icon: <Users size={28} className="text-sky-600" />,
+      color: "from-blue-400 to-blue-600"
+    },
+    {
+      title: 'Systèmes d\'Information',
+      desc: 'Mise en place de plateformes de diffusion de contenus et de sensibilisation optimisées pour tous les supports.',
       icon: <Bot size={28} className="text-sky-600" />,
       color: "from-green-400 to-green-600"
     },
     {
-      title: 'Développement Web',
-      desc: 'Sites vitrines modernes, E-commerce performants et applications web React.',
-      icon: <Code size={28} className="text-sky-600" />,
-      color: "from-blue-400 to-blue-600"
-    },
-    {
-      title: 'Design Graphique',
-      desc: 'Identité visuelle percutante, logos vectoriels et UI/UX Design moderne.',
-      icon: <Palette size={28} className="text-sky-600" />,
+      title: 'Optimisation UX & Performance',
+      desc: 'Design d\'interfaces fluides et accessibles, avec une performance accrue pour les connexions limitées.',
+      icon: <Cpu size={28} className="text-sky-600" />,
       color: "from-purple-400 to-pink-600"
     },
     {
-      title: 'Community Management',
-      desc: 'Stratégie de contenu engageante et gestion de vos réseaux sociaux.',
-      icon: <Users size={28} className="text-sky-600" />,
-      color: "from-orange-400 to-red-600"
-    },
-    {
-      title: 'YouTube/TikTok',
-      desc: 'Création, montage et optimisation SEO de chaînes pour la monétisation.',
+      title: 'Numérisation Intelligente',
+      desc: 'Conversion de documents physiques, audio ou manuscrits en formats numériques éditables (Word, LaTeX) via OCR/HTR.',
       icon: <Video size={28} className="text-sky-600" />,
       color: "from-red-500 to-pink-600"
-    },
-    {
-      title: 'Solutions Maps',
-      desc: 'Intégration API Google Maps, géolocalisation et store locator.',
-      icon: <Map size={28} className="text-sky-600" />,
-      color: "from-teal-400 to-emerald-600"
     }
   ];
 
@@ -67,10 +55,10 @@ const Services: React.FC = () => {
       >
         <span className="text-sky-600 font-bold tracking-widest uppercase text-sm">Ce que je propose</span>
         <h1 className="text-4xl md:text-5xl font-black text-slate-800 mt-2 mb-6">
-           Solutions Digitales <br/><span className="text-sky-500">Innovantes</span>
+           Solutions Digitales <br/><span className="text-sky-500">Engagées</span>
         </h1>
         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-           Une expertise technique combinée à une vision stratégique pour propulser votre activité.
+           Une expertise technique dédiée à l'impact social et à l'efficacité numérique.
         </p>
       </motion.div>
 
@@ -103,7 +91,7 @@ const Services: React.FC = () => {
                     </p>
                     
                     <div className="flex items-center justify-between border-t border-slate-200/50 pt-4">
-                        <span className="text-sm font-semibold text-slate-400">À partir de 100€</span>
+                        <span className="text-sm font-semibold text-slate-400">Sur devis</span>
                         <button className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 group-hover:bg-sky-500 group-hover:text-white transition-all">
                             <ArrowUpRight size={20} />
                         </button>

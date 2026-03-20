@@ -62,7 +62,7 @@ const Home: React.FC = () => {
             >
                 <span>Expert RH</span>
                 <span className="hidden md:inline text-sky-300">•</span>
-                <span className="text-sky-600 font-bold">Développeur Full-Stack</span>
+                <span className="text-sky-600 font-bold">Développeur & Spécialiste IA</span>
             </motion.h2>
             
             <motion.p 
@@ -71,7 +71,7 @@ const Home: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed border-l-4 border-sky-500 pl-4"
             >
-                Je transforme les défis administratifs et technologiques en opportunités de croissance. Une approche hybride unique en République du Congo.
+                Je conçois des solutions numériques innovantes alliant engagement citoyen et intelligence artificielle. Expert en numérisation intelligente et plateformes web performantes.
             </motion.p>
             
             <motion.div 
@@ -84,10 +84,10 @@ const Home: React.FC = () => {
                     Voir mes projets 
                     <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <a href="/cv.pdf" className="group bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-xl font-bold transition-all hover:border-sky-500 hover:text-sky-600 flex items-center justify-center gap-2">
+                <button className="group bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-xl font-bold transition-all hover:border-sky-500 hover:text-sky-600 flex items-center justify-center gap-2">
                     Télécharger CV 
                     <Download size={18} className="group-hover:translate-y-1 transition-transform" />
-                </a>
+                </button>
             </motion.div>
         </div>
 
@@ -103,7 +103,7 @@ const Home: React.FC = () => {
                             className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-110"
                             onError={(e) => {
                                 // Fallback en cas d'erreur de chargement
-                                e.currentTarget.src = "https://paul-ndamba.netlify.app/asset/images/hero/NGPR.png";
+                                e.currentTarget.src = "https://picsum.photos/seed/ndamba/800/1000";
                                 e.currentTarget.alt = "Image non trouvée";
                             }}
                         />
@@ -115,14 +115,14 @@ const Home: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* Floating Elements */}
+                    {/* Floating Elements - Placeholders */}
                     <motion.div 
                         animate={{ y: [0, -15, 0] }}
                         transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
                         className="absolute -right-12 top-20 bg-white/80 backdrop-blur-xl p-4 rounded-2xl shadow-xl border border-white/60"
                     >
                         <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center text-sky-600 font-black text-xl">3+</div>
+                            <div className="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center text-sky-600 font-black text-xl">?</div>
                             <div className="text-sm font-semibold text-slate-700 leading-tight">Années<br/>d'Expérience</div>
                         </div>
                     </motion.div>
@@ -133,7 +133,7 @@ const Home: React.FC = () => {
                         className="absolute -left-12 bottom-20 bg-white/80 backdrop-blur-xl p-4 rounded-2xl shadow-xl border border-white/60"
                     >
                         <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 font-bold text-xl">50</div>
+                            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 font-bold text-xl">?</div>
                             <div className="text-sm font-semibold text-slate-700 leading-tight">Projets<br/>Réussis</div>
                         </div>
                     </motion.div>

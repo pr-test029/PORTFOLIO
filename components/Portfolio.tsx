@@ -1,59 +1,9 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Project } from '../types';
-import { ExternalLink, Tag, Folder } from 'lucide-react';
-
-const projects: Project[] = [
-  {
-    id: 1,
-    title: 'Bot WhatsApp E-commerce',
-    description: 'Assistant virtuel intelligent gérant catalogue et commandes.',
-    category: 'chatbot',
-    tags: ['Python', 'WhatsApp API', 'AI'],
-    icon: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=800&auto=format&fit=crop'
-  },
-  {
-    id: 2,
-    title: 'Fashion Store Pro',
-    description: 'Plateforme E-commerce complète avec tableau de bord admin.',
-    category: 'web',
-    tags: ['React', 'Node.js', 'Stripe'],
-    icon: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800&auto=format&fit=crop'
-  },
-  {
-    id: 3,
-    title: 'EcoTech Branding',
-    description: 'Refonte complète de l\'identité visuelle pour une startup verte.',
-    category: 'design',
-    tags: ['Illustrator', 'Figma', 'Brand'],
-    icon: 'https://images.unsplash.com/photo-1626785774573-4b799314346d?q=80&w=800&auto=format&fit=crop'
-  },
-  {
-    id: 4,
-    title: 'HR Connect App',
-    description: 'App mobile de gestion des congés et bulletins de paie.',
-    category: 'app',
-    tags: ['React Native', 'Firebase'],
-    icon: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop'
-  },
-  {
-    id: 5,
-    title: 'GeoLocator Plus',
-    description: 'Intégration Google Maps avancée pour la logistique.',
-    category: 'web',
-    tags: ['Maps API', 'Geolocation'],
-    icon: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=800&auto=format&fit=crop'
-  },
-  {
-    id: 6,
-    title: 'Finance Dashboard',
-    description: 'Interface UI/UX pour une application bancaire.',
-    category: 'design',
-    tags: ['Figma', 'Prototyping'],
-    icon: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop'
-  }
-];
+import { Link } from 'react-router-dom';
+import { ExternalLink, Tag, Folder, Info } from 'lucide-react';
+import { projects } from '../data/projects';
 
 const Portfolio: React.FC = () => {
   const [filter, setFilter] = useState<'all' | 'web' | 'design' | 'chatbot' | 'app'>('all');
@@ -105,29 +55,50 @@ const Portfolio: React.FC = () => {
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                  />
-                 <div className="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-sm">
-                    <button className="bg-white text-slate-900 px-5 py-2.5 rounded-full font-bold text-sm flex items-center gap-2 hover:bg-sky-500 hover:text-white transition-colors">
-                        <ExternalLink size={16} /> Voir Projet
-                    </button>
+                 <div className="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-4 backdrop-blur-sm">
+                    <Link 
+                      to={`/project/${project.id}`}
+                      target="_blank"
+                      className="bg-white text-slate-900 px-6 py-3 rounded-full font-bold text-sm flex items-center gap-2 hover:bg-sky-500 hover:text-white transition-all hover:scale-105"
+                    >
+                        <Info size={16} /> Voir Plus
+                    </Link>
+                    <a 
+                      href={project.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="bg-sky-500 text-white px-6 py-3 rounded-full font-bold text-sm flex items-center gap-2 hover:bg-white hover:text-slate-900 transition-all hover:scale-105"
+                    >
+                        <ExternalLink size={16} /> Lancer l'App
+                    </a>
                  </div>
               </div>
               
-              {/* Content */}
-              <div className="p-6 relative">
-                <div className="absolute -top-6 right-6 w-12 h-12 bg-sky-500 rounded-xl flex items-center justify-center text-white shadow-lg rotate-12 group-hover:rotate-0 transition-transform duration-300">
-                    <Folder size={20} />
-                </div>
-
-                <div className="flex gap-2 mb-3">
-                   {project.tags.map((tag, i) => (
-                    <span key={i} className="text-[10px] uppercase font-bold tracking-wider bg-slate-100 text-slate-500 px-2 py-1 rounded-md">
-                        {tag}
+              <div className="p-8">
+                <div className="flex items-center gap-2 mb-4">
+                    <div className="p-2 bg-sky-50 rounded-xl">
+                        <Folder size={16} className="text-sky-500" />
+                    </div>
+                    <span className="text-xs font-black uppercase tracking-widest text-slate-400">
+                        {project.category}
                     </span>
-                   ))}
                 </div>
-
-                <h3 className="text-xl font-bold text-slate-800 mb-2 group-hover:text-sky-600 transition-colors">{project.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed">{project.description}</p>
+                
+                <h3 className="text-2xl font-bold text-slate-800 mb-3 group-hover:text-sky-600 transition-colors">
+                    {project.title}
+                </h3>
+                
+                <p className="text-slate-500 text-sm leading-relaxed mb-6 line-clamp-2">
+                    {project.shortDescription}
+                </p>
+                
+                <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag, i) => (
+                        <span key={i} className="px-3 py-1 bg-slate-50 text-slate-500 rounded-full text-[10px] font-bold uppercase tracking-wider flex items-center gap-1 border border-slate-100">
+                            <Tag size={10} /> {tag}
+                        </span>
+                    ))}
+                </div>
               </div>
             </motion.div>
           ))}

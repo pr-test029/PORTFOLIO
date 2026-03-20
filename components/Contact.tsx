@@ -95,8 +95,7 @@ const Contact: React.FC = () => {
                         <div className="p-3 bg-sky-100 rounded-full text-sky-600 group-hover:bg-sky-500 group-hover:text-white transition-colors"><Phone size={20} /></div>
                         <div>
                             <h3 className="font-bold text-sky-900">Téléphone</h3>
-                            <p className="text-slate-600">+242 06 769 6157</p>
-                            <p className="text-slate-600">+242 05 013 3271</p>
+                            <p className="text-slate-600">[Votre Numéro]</p>
                         </div>
                     </div>
 
@@ -104,7 +103,7 @@ const Contact: React.FC = () => {
                         <div className="p-3 bg-sky-100 rounded-full text-sky-600 group-hover:bg-sky-500 group-hover:text-white transition-colors"><Mail size={20} /></div>
                         <div>
                             <h3 className="font-bold text-sky-900">Email</h3>
-                            <p className="text-slate-600">paulndamba2@gmail.com</p>
+                            <p className="text-slate-600">[Votre Email]</p>
                         </div>
                     </div>
                     
@@ -112,7 +111,7 @@ const Contact: React.FC = () => {
                         <div className="p-3 bg-sky-100 rounded-full text-sky-600 group-hover:bg-sky-500 group-hover:text-white transition-colors"><Clock size={20} /></div>
                         <div>
                             <h3 className="font-bold text-sky-900">Disponibilité</h3>
-                            <p className="text-slate-600">Lun - Ven: 8h00 - 18h00</p>
+                            <p className="text-slate-600">[Vos Horaires]</p>
                         </div>
                     </div>
                 </div>
