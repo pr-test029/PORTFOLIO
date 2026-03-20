@@ -86,5 +86,34 @@ export const projects: Project[] = [
       'Processus Automatisé : Passage de la saisie à l\'impression en quelques clics.',
       'Vérification Instantanée : Outil de scan intégré pour valider un bulletin.'
     ]
+  },
+  {
+    id: 4,
+    title: 'PR-Cluster',
+    shortDescription: 'Plateforme de réseautage social dynamique et collaborative.',
+    fullDescription: 'PR-Cluster redéfinit l\'interaction sociale en offrant un espace où la donnée est organisée par "clusters" thématiques, permettant une communication ciblée et une expérience utilisateur hautement personnalisée. Connectez, partagez et collaborez au sein d\'un écosystème numérique fluide.',
+    pitch: 'Connectez, partagez et collaborez au sein d\'un écosystème numérique fluide.',
+    category: 'web',
+    tags: ['React', 'TypeScript', 'Firebase', 'Realtime', 'Netlify'],
+    icon: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop',
+    link: 'https://pr-cluster.netlify.app',
+    features: [
+      'Flux d\'Actualités en Temps Réel : Système de publication et de mise à jour instantanée des contenus pour une interactivité maximale.',
+      'Architecture par Clusters : Organisation des communautés et des discussions par centres d\'intérêt ou groupes spécifiques.',
+      'Profils Utilisateurs Riches : Personnalisation avancée des espaces personnels et gestion des relations (amis, abonnés, connexions).',
+      'Système d\'Interactions : Engagement via des commentaires, des réactions et des partages de contenus multimédias.',
+      'Notifications Intelligentes : Alertes en temps réel sur l\'activité du réseau pour maintenir l\'engagement des utilisateurs.'
+    ],
+    stack: {
+      frontend: 'Développé avec React et TypeScript, garantissant une interface ultra-réactive (SPA) et une maintenance simplifiée.',
+      backend: 'Utilisation de Firebase (Firestore/Realtime Database) pour la synchronisation des données en direct.',
+      deployment: 'Déploiement continu sur Netlify, optimisé pour les performances mondiales.',
+      other: ['Gestion complexe des flux de données et des sessions utilisateurs.']
+    },
+    highlights: [
+      'Interface Moderne : Design inspiré des standards actuels des réseaux sociaux, privilégiant la clarté et la rapidité de navigation.',
+      'Expérience Mobile-First : Ergonomie parfaitement adaptée aux smartphones pour une utilisation nomade.',
+      'Navigation Fluide : Transition sans rechargement entre les différents espaces du réseau (Profil, Feed, Groupes).'
+    ]
   }
 ];

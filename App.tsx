@@ -7,7 +7,7 @@ import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
 import Services from './components/Services';
 import Contact from './components/Contact';
-import AIChat from './components/AIChat';
+import WhatsAppButton from './components/WhatsAppButton';
 
 const App: React.FC = () => {
   return (
@@ -21,7 +21,7 @@ const App: React.FC = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        <AIChat />
+        <WhatsAppButton />
       </Layout>
     </Router>
   );
