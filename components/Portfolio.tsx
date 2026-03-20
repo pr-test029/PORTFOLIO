@@ -51,7 +51,7 @@ const Portfolio: React.FC = () => {
 
       {/* Masonry-style Grid */}
       <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <AnimatePresence mode='popLayout'>
+        <AnimatePresence mode='popLayout' initial={false}>
           {filteredProjects.map((project) => (
             <motion.div
               layout

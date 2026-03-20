@@ -10,14 +10,16 @@ const TiltCard = ({ children }: { children: React.ReactNode }) => {
     const rotateX = useTransform(y, [-100, 100], [10, -10]);
     const rotateY = useTransform(x, [-100, 100], [-10, 10]);
   
+    const isTouch = typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0);
+  
     return (
       <motion.div
         style={{ x, y, rotateX, rotateY, z: 100 }}
-        drag
+        drag={!isTouch}
         dragElastic={0.16}
         dragConstraints={{ top: 0, left: 0, right: 0, bottom: 0 }}
-        whileHover={{ cursor: "grab" }}
-        whileTap={{ cursor: "grabbing" }}
+        whileHover={!isTouch ? { cursor: "grab" } : {}}
+        whileTap={!isTouch ? { cursor: "grabbing" } : {}}
         className="perspective-1000"
       >
         {children}
@@ -100,7 +102,7 @@ const Home: React.FC = () => {
                         <img 
                             src="NGPR.png" 
                             alt="NDAMBA GOSSAKI Paul Roger" 
-                            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-110"
+                            className="w-full h-full object-cover transition-all duration-700 transform group-hover:scale-110 will-change-transform"
                             onError={(e) => {
                                 // Fallback en cas d'erreur de chargement
                                 e.currentTarget.src = "https://picsum.photos/seed/ndamba/800/1000";

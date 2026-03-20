@@ -13,6 +13,9 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const mouseY = useMotionValue(0);
 
   useEffect(() => {
+    // Disable parallax on touch devices for better performance
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) return;
+
     const handleMouseMove = (e: MouseEvent) => {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
@@ -45,18 +48,13 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         className="fixed inset-0 pointer-events-none z-0 bg-gradient-to-br from-sky-200 via-blue-100 to-white"
       >
         {/* Sun / Light Source */}
-        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-gradient-to-br from-yellow-200/40 to-orange-100/20 rounded-full blur-[100px] animate-pulse"></div>
+        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-gradient-to-br from-yellow-200/40 to-orange-100/20 rounded-full blur-[100px]"></div>
         
-        {/* Parallax Clouds */}
+        {/* Parallax Clouds - Simplified for performance */}
         <motion.div style={{ x: cloudX, y: cloudY }} className="absolute inset-0">
-            <div className="absolute top-[10%] left-[5%] w-64 h-24 bg-white/40 rounded-full blur-2xl"></div>
-            <div className="absolute top-[20%] right-[10%] w-96 h-32 bg-white/30 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-[20%] left-[15%] w-80 h-28 bg-white/50 rounded-full blur-2xl"></div>
-            <div className="absolute bottom-[10%] right-[20%] w-72 h-24 bg-white/40 rounded-full blur-xl"></div>
+            <div className="absolute top-[10%] left-[5%] w-64 h-24 bg-white/20 rounded-full blur-xl"></div>
+            <div className="absolute top-[20%] right-[10%] w-96 h-32 bg-white/10 rounded-full blur-2xl"></div>
         </motion.div>
-
-        {/* Grid Pattern Overlay */}
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
       </motion.div>
 
       {/* --- Ultra Glass Header --- */}
@@ -149,13 +147,13 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
       {/* --- Main Content with Page Transition --- */}
       <main className="relative z-10 pt-28 pb-12 min-h-screen">
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait" initial={false}>
             <motion.div
                 key={location.pathname}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2, ease: "linear" }}
             >
                 {children}
             </motion.div>
