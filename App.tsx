@@ -8,7 +8,6 @@ import Portfolio from './components/Portfolio';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import AIChat from './components/AIChat';
-import ProjectDetail from './components/ProjectDetail';
 
 const App: React.FC = () => {
   return (
@@ -19,7 +18,6 @@ const App: React.FC = () => {
           <Route path="/about" element={<About />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/project/:id" element={<ProjectDetail />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
