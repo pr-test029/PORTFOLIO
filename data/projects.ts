@@ -96,7 +96,7 @@ export const projects: Project[] = [
     category: 'web',
     tags: ['React', 'TypeScript', 'Firebase', 'Realtime', 'Netlify'],
     icon: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop',
-    link: 'https://pr-cluster.netlify.app',
+    link: 'https://prcluster.netlify.app/',
     features: [
       'Flux d\'Actualités en Temps Réel : Système de publication et de mise à jour instantanée des contenus pour une interactivité maximale.',
       'Architecture par Clusters : Organisation des communautés et des discussions par centres d\'intérêt ou groupes spécifiques.',
