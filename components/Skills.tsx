@@ -24,23 +24,41 @@ const SkillBar: React.FC<{ skill: Skill; color: string }> = ({ skill, color }) =
 const Skills: React.FC = () => {
   const skillCategories = [
     {
-      title: 'Développement Frontend',
+      title: 'Développement Full Stack',
       icon: <Code className="text-white" size={20} />,
       color: "from-blue-500 to-cyan-400",
       skills: [
-        { name: 'React & TypeScript', percentage: 90 },
-        { name: 'Tailwind CSS', percentage: 95 },
-        { name: 'Single Page Applications (SPA)', percentage: 85 },
+        { name: 'Frontend (React, TS, Tailwind)', percentage: 95 },
+        { name: 'Backend & API', percentage: 85 },
+        { name: 'Webmastering', percentage: 90 },
       ]
     },
     {
-      title: 'Intelligence Artificielle & OCR',
-      icon: <Cpu className="text-white" size={20} />,
+      title: 'Intelligence Artificielle',
+      icon: <Bot className="text-white" size={20} />,
       color: "from-purple-500 to-pink-500",
       skills: [
-        { name: 'OCR & HTR (Vision IA)', percentage: 85 },
-        { name: 'Deep Learning (Traitement Doc)', percentage: 75 },
-        { name: 'Export Word & Office API', percentage: 90 },
+        { name: 'IA Générative (LLMs)', percentage: 95 },
+        { name: 'IA Agentique (Antigravity, Claude)', percentage: 90 },
+      ]
+    },
+    {
+      title: 'Design & Infographie',
+      icon: <Palette className="text-white" size={20} />,
+      color: "from-orange-500 to-red-400",
+      skills: [
+        { name: 'Adobe Suite (PS, AI, PR, AE)', percentage: 85 },
+        { name: 'Canva (Maîtrise totale)', percentage: 100 },
+      ]
+    },
+    {
+      title: 'Gestion & RH',
+      icon: <Users className="text-white" size={20} />,
+      color: "from-emerald-500 to-teal-400",
+      skills: [
+        { name: 'Gestion RH & Administration', percentage: 90 },
+        { name: 'Microsoft Office (Word, Excel, PPT)', percentage: 95 },
+        { name: 'Marketing Pratique', percentage: 85 },
       ]
     }
   ];
@@ -52,7 +70,7 @@ const Skills: React.FC = () => {
             Arsenal de <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-blue-600">Compétences</span>
         </h1>
         <p className="text-lg text-slate-500 max-w-2xl mx-auto">
-           Une expertise technique focalisée sur la performance, l'accessibilité et l'innovation par l'IA.
+           Une expertise polyvalente alliant gestion, design, IA et développement web.
         </p>
       </div>
 
@@ -89,7 +107,7 @@ const Skills: React.FC = () => {
         transition={{ delay: 0.5 }}
         className="mt-16 flex flex-wrap justify-center gap-4 opacity-70"
       >
-        {['React', 'TypeScript', 'Tailwind', 'Netlify', 'OCR', 'Deep Learning', 'Office API'].map((tech, i) => (
+        {['React', 'TypeScript', 'Tailwind', 'Adobe Suite', 'Canva', 'IA Agentique', 'RH', 'Marketing'].map((tech, i) => (
             <span key={i} className="px-4 py-2 bg-white rounded-full text-xs font-bold text-slate-400 shadow-sm border border-slate-100">
                 {tech}
             </span>

@@ -6,28 +6,34 @@ import { Bot, Code, Palette, Users, Video, Map, ArrowUpRight, Cpu } from 'lucide
 const Services: React.FC = () => {
   const services = [
     {
-      title: 'Plateformes Citoyennes',
-      desc: 'Conception de solutions numériques pour favoriser l\'engagement et la participation active au développement local.',
-      icon: <Users size={28} className="text-sky-600" />,
+      title: 'Infographie & Design',
+      desc: 'Conception graphique complète : retouche photo, montage vidéo, cartes de visite, flyers, badges, affiches, bâches, etc.',
+      icon: <Palette size={28} className="text-sky-600" />,
+      color: "from-orange-400 to-red-600"
+    },
+    {
+      title: 'Développement Web & Mobile',
+      desc: 'Création de sites web, applications web et mobiles (Android & iOS) sur mesure.',
+      icon: <Code size={28} className="text-sky-600" />,
       color: "from-blue-400 to-blue-600"
     },
     {
-      title: 'Systèmes d\'Information',
-      desc: 'Mise en place de plateformes de diffusion de contenus et de sensibilisation optimisées pour tous les supports.',
-      icon: <Bot size={28} className="text-sky-600" />,
-      color: "from-green-400 to-green-600"
-    },
-    {
-      title: 'Optimisation UX & Performance',
-      desc: 'Design d\'interfaces fluides et accessibles, avec une performance accrue pour les connexions limitées.',
-      icon: <Cpu size={28} className="text-sky-600" />,
+      title: 'Gestion Réseaux Sociaux',
+      desc: 'Création, gestion et animation de vos réseaux sociaux pour une présence digitale forte.',
+      icon: <Users size={28} className="text-sky-600" />,
       color: "from-purple-400 to-pink-600"
     },
     {
-      title: 'Numérisation Intelligente',
-      desc: 'Conversion de documents physiques, audio ou manuscrits en formats numériques éditables (Word, LaTeX) via OCR/HTR.',
-      icon: <Video size={28} className="text-sky-600" />,
-      color: "from-red-500 to-pink-600"
+      title: 'Localisation Google Maps',
+      desc: 'Service de référencement et de localisation de votre entreprise sur Google Maps pour une visibilité locale accrue.',
+      icon: <Map size={28} className="text-sky-600" />,
+      color: "from-green-400 to-green-600"
+    },
+    {
+      title: 'Saisie & Mise en forme',
+      desc: 'Service de saisie numérique rapide et mise en forme professionnelle de vos documents.',
+      icon: <Cpu size={28} className="text-sky-600" />,
+      color: "from-yellow-400 to-orange-600"
     }
   ];
 

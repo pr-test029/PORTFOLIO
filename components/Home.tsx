@@ -60,12 +60,20 @@ const Home: React.FC = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="text-2xl lg:text-3xl text-slate-600 font-medium mb-8 flex flex-col md:flex-row gap-2"
+                className="text-2xl lg:text-3xl text-slate-600 font-medium mb-4 flex flex-col md:flex-row gap-2"
             >
-                <span>Expert RH</span>
+                <span>Expert RH & Gestion</span>
                 <span className="hidden md:inline text-sky-300">•</span>
-                <span className="text-sky-600 font-bold">Développeur & Spécialiste IA</span>
+                <span className="text-sky-600 font-bold">Développeur Full Stack & IA</span>
             </motion.h2>
+
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.35 }}
+                className="mb-8"
+            >
+            </motion.div>
             
             <motion.p 
                 initial={{ opacity: 0 }}
@@ -73,7 +81,7 @@ const Home: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed border-l-4 border-sky-500 pl-4"
             >
-                Je conçois des solutions numériques innovantes alliant engagement citoyen et intelligence artificielle. Expert en numérisation intelligente et plateformes web performantes.
+                Je conçois des solutions numériques complètes alliant expertise en gestion des ressources humaines, management et développement Full Stack assisté par IA.
             </motion.p>
             
             <motion.div 
@@ -124,7 +132,7 @@ const Home: React.FC = () => {
                         className="absolute -right-12 top-20 bg-white/80 backdrop-blur-xl p-4 rounded-2xl shadow-xl border border-white/60"
                     >
                         <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center text-sky-600 font-black text-xl">?</div>
+                            <div className="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center text-sky-600 font-black text-xl">4+</div>
                             <div className="text-sm font-semibold text-slate-700 leading-tight">Années<br/>d'Expérience</div>
                         </div>
                     </motion.div>
@@ -135,7 +143,7 @@ const Home: React.FC = () => {
                         className="absolute -left-12 bottom-20 bg-white/80 backdrop-blur-xl p-4 rounded-2xl shadow-xl border border-white/60"
                     >
                         <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 font-bold text-xl">?</div>
+                            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 font-bold text-xl">10+</div>
                             <div className="text-sm font-semibold text-slate-700 leading-tight">Projets<br/>Réussis</div>
                         </div>
                     </motion.div>

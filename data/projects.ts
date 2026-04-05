@@ -115,5 +115,32 @@ export const projects: Project[] = [
       'Expérience Mobile-First : Ergonomie parfaitement adaptée aux smartphones pour une utilisation nomade.',
       'Navigation Fluide : Transition sans rechargement entre les différents espaces du réseau (Profil, Feed, Groupes).'
     ]
+  },
+  {
+    id: 5,
+    title: 'Powerful Reach',
+    shortDescription: 'Agence digitale spécialisée en solutions numériques innovantes.',
+    fullDescription: 'Site web d\'une agence digitale basée à Brazzaville, Congo. Powerful Reach fusionne créativité et technologie pour propulser les entreprises vers de nouveaux sommets. L\'agence affiche +50 projets réalisés et propose une expertise 360° dans le domaine du digital.',
+    pitch: 'L\'agence qui domine le digital.',
+    category: 'web',
+    tags: ['React', 'Netlify', 'UI/UX', 'Digital Agency'],
+    icon: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop',
+    link: 'https://powerfulreach.netlify.app/',
+    features: [
+      'Développement Web : Sites vitrines, E-commerce, Blogs & Portfolios.',
+      'Applications Mobiles : Apps natives iOS/Android, Web Apps PWA.',
+      'Design & Infographie : Logos, Branding, Supports de communication.',
+      'Référencement Local : Google Business Profile, SEO Local, Géolocalisation.'
+    ],
+    stack: {
+      frontend: 'Développé avec React (SPA).',
+      deployment: 'Hébergé sur Netlify.',
+      other: ['Design moderne', 'Widget chat', 'Newsletter']
+    },
+    highlights: [
+      '+50 projets réalisés.',
+      'Expertise 360° dans le domaine du digital.',
+      'Design moderne : dark/light mode, typographie bold.'
+    ]
   }
 ];

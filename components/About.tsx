@@ -21,30 +21,47 @@ const About: React.FC = () => {
                     <div className="p-3 bg-sky-100 text-sky-600 rounded-xl">
                         <Heart size={24} />
                     </div>
-                    <h2 className="text-3xl font-bold text-slate-800">Mon Histoire</h2>
+                    <h2 className="text-3xl font-bold text-slate-800">Mon Parcours</h2>
                 </div>
                 <p className="text-lg text-slate-600 leading-relaxed mb-6">
                     Je suis <strong className="text-slate-900 bg-sky-100 px-1 rounded">NDAMBA GOSSAKI Paul Roger</strong>. 
-                    Ma passion réside dans le développement de solutions numériques à fort impact social. 
-                    Spécialisé dans les technologies web modernes, je m'efforce de créer des outils qui favorisent l'engagement citoyen et le développement local.
+                    Développeur Full Stack et expert en gestion, je combine une solide formation en administration des entreprises avec une maîtrise technique pointue en développement web et IA. Mon approche est centrée sur la création de solutions numériques performantes qui répondent aux enjeux réels de gestion et d'engagement social.
                 </p>
                 <p className="text-lg text-slate-600 leading-relaxed">
-                    Mon approche combine rigueur technique et vision stratégique pour transformer des idées complexes en plateformes accessibles et performantes.
+                    Secrétaire Général Adjoint en charge des RH au sein du collectif LAMUKA, je mets mon expertise technique et managériale au service de l'autonomisation des femmes vivant avec handicap.
                 </p>
             </motion.div>
 
             {/* Timeline */}
             <div>
                 <h3 className="text-2xl font-bold text-slate-800 mb-8 flex items-center gap-2">
-                    <Briefcase className="text-sky-500" /> Expérience
+                    <Briefcase className="text-sky-500" /> Expérience Professionnelle
                 </h3>
                 <div className="relative border-l-2 border-sky-100 ml-4 space-y-12">
                     {[
                         { 
-                            year: 'Année - Présent', 
-                            role: '[Votre Poste]', 
-                            company: '[Votre Entreprise]', 
-                            desc: '[Description de vos responsabilités et accomplissements réels.]' 
+                            year: '2025 - 2026', 
+                            role: 'Secrétaire Général Adjoint (RH), Développeur & Infographe', 
+                            company: 'Collectif LAMUKA', 
+                            desc: 'Gestion des ressources humaines, développement de solutions numériques et création graphique pour l\'autonomisation des femmes vivant avec handicap.' 
+                        },
+                        { 
+                            year: '2023', 
+                            role: 'Assistant de service (Promotion & Visibilité)', 
+                            company: 'Salon Osiane (pour l\'ARTF)', 
+                            desc: 'Promotion et visibilité de l\'Agence de Régulation des transferts de fonds.' 
+                        },
+                        { 
+                            year: '2022', 
+                            role: 'Stagiaire Rotatif', 
+                            company: 'ARTF', 
+                            desc: 'Passage dans les directions : RH & Logistique, Régulation, Financière, Inspection des Statistiques et Études, et Informatique.' 
+                        },
+                        { 
+                            year: 'Plusieurs années', 
+                            role: 'Agent Bureautique & Impression Numérique', 
+                            company: 'Best Graphic', 
+                            desc: 'Gestion des services bureautiques et impression numérique.' 
                         }
                     ].map((item, idx) => (
                         <motion.div 
@@ -81,7 +98,10 @@ const About: React.FC = () => {
                 </h3>
                 <div className="space-y-6 relative z-10">
                      {[
-                        { title: '[Votre Diplôme]', school: '[Votre École]', year: '[Année]', color: 'text-sky-400' },
+                        { title: 'Licence Gestion & Administration des Entreprises', school: 'ESGAE (Accrédité CAMES)', year: '2020-2024', color: 'text-sky-400' },
+                        { title: 'BTSE Gestion des Ressources Humaines', school: 'ESGAE', year: '2020-2022', color: 'text-sky-400' },
+                        { title: 'Baccalauréat Littéraire A4', school: 'Congo Brazzaville', year: '2020', color: 'text-sky-400' },
+                        { title: 'Études de Droit (2 ans)', school: 'UMNG', year: '2020-2022', color: 'text-sky-400' },
                     ].map((edu, idx) => (
                         <div key={idx} className="pb-4 border-b border-white/10 last:border-0 last:pb-0">
                             <h4 className={`font-bold ${edu.color}`}>{edu.title}</h4>
@@ -99,10 +119,10 @@ const About: React.FC = () => {
                 className="bg-gradient-to-br from-sky-400 to-blue-600 rounded-[2rem] p-8 text-white shadow-lg text-center"
             >
                 <Award size={48} className="mx-auto mb-4 text-white/80" />
-                <div className="text-5xl font-black mb-2">?</div>
-                <p className="text-sky-100 font-medium">Statistique Réelle</p>
+                <div className="text-5xl font-black mb-2">Kimbanguiste</div>
+                <p className="text-sky-100 font-medium">MSSK</p>
                 <p className="text-xs text-sky-200 mt-4 opacity-80">
-                    [Description de votre engagement ou d'un chiffre clé.]
+                    Membre du Mouvement Sociale de Surveillance Kimbanguiste depuis 2017.
                 </p>
             </motion.div>
         </div>

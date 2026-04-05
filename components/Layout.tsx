@@ -170,7 +170,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                         <span className="font-bold text-sky-900 text-lg">N.G.P.R</span>
                     </div>
                     <p className="text-slate-600 text-sm max-w-xs leading-relaxed">
-                        [Votre slogan ou description courte ici. Prêt pour vos contenus réels.]
+                        Propulsez votre vision vers le sommet, avec une portée et une puissance éternellement jeune.
                     </p>
                 </div>
                 <div>
