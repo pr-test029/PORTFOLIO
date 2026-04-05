@@ -100,7 +100,7 @@ const Home: React.FC = () => {
                     {/* Inner Content */}
                     <div className="w-full h-full rounded-[1.5rem] overflow-hidden relative group">
                         <img 
-                            src="NGPR.png" 
+                            src="https://i.ibb.co/84nS44k0/Gemini-Generated-Image-bs9ygebs9ygebs9y.jpg" 
                             alt="NDAMBA GOSSAKI Paul Roger" 
                             className="w-full h-full object-cover transition-all duration-700 transform group-hover:scale-110 will-change-transform"
                             onError={(e) => {
