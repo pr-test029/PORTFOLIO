@@ -15,21 +15,31 @@ const About: React.FC = () => {
             <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="bg-white/60 backdrop-blur-xl rounded-[2rem] p-8 md:p-10 shadow-lg border border-white/60"
+                className="bg-white/60 backdrop-blur-xl rounded-[2rem] p-8 md:p-10 shadow-lg border border-white/60 flex flex-col md:flex-row gap-8"
             >
-                <div className="flex items-center gap-4 mb-6">
-                    <div className="p-3 bg-sky-100 text-sky-600 rounded-xl">
-                        <Heart size={24} />
-                    </div>
-                    <h2 className="text-3xl font-bold text-slate-800">Mon Parcours</h2>
+                <div className="flex-shrink-0">
+                    <img 
+                        src="https://i.ibb.co/0yy7mXtC/Gemini-Generated-Image-s2b040s2b040s2b0.jpg" 
+                        alt="NDAMBA GOSSAKI Paul Roger" 
+                        className="w-48 h-48 rounded-2xl object-cover shadow-md"
+                        referrerPolicy="no-referrer"
+                    />
                 </div>
-                <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                    Je suis <strong className="text-slate-900 bg-sky-100 px-1 rounded">NDAMBA GOSSAKI Paul Roger</strong>. 
-                    Développeur Full Stack et expert en gestion, je combine une solide formation en administration des entreprises avec une maîtrise technique pointue en développement web et IA. Mon approche est centrée sur la création de solutions numériques performantes qui répondent aux enjeux réels de gestion et d'engagement social.
-                </p>
-                <p className="text-lg text-slate-600 leading-relaxed">
-                    Secrétaire Général Adjoint en charge des RH au sein du collectif LAMUKA, je mets mon expertise technique et managériale au service de l'autonomisation des femmes vivant avec handicap.
-                </p>
+                <div>
+                    <div className="flex items-center gap-4 mb-6">
+                        <div className="p-3 bg-sky-100 text-sky-600 rounded-xl">
+                            <Heart size={24} />
+                        </div>
+                        <h2 className="text-3xl font-bold text-slate-800">Mon Parcours</h2>
+                    </div>
+                    <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                        Je suis <strong className="text-slate-900 bg-sky-100 px-1 rounded">NDAMBA GOSSAKI Paul Roger</strong>. 
+                        Développeur Full Stack et expert en gestion, je combine une solide formation en administration des entreprises avec une maîtrise technique pointue en développement web et IA. Mon approche est centrée sur la création de solutions numériques performantes qui répondent aux enjeux réels de gestion et d'engagement social.
+                    </p>
+                    <p className="text-lg text-slate-600 leading-relaxed">
+                        Secrétaire Général Adjoint en charge des RH au sein du collectif LAMUKA, je mets mon expertise technique et managériale au service de l'autonomisation des femmes vivant avec handicap.
+                    </p>
+                </div>
             </motion.div>
 
             {/* Timeline */}
@@ -58,7 +68,13 @@ const About: React.FC = () => {
                             desc: 'Passage dans les directions : RH & Logistique, Régulation, Financière, Inspection des Statistiques et Études, et Informatique.' 
                         },
                         { 
-                            year: 'Plusieurs années', 
+                            year: '2024 - 2025', 
+                            role: 'Certifications : Entrepreneuriat, Webmaster, Infographie, Community Management', 
+                            company: 'MTN', 
+                            desc: 'Obtention de certifications professionnelles décernées par MTN, leader des télécommunications en Afrique.' 
+                        },
+                        { 
+                            year: '2023 - 2025', 
                             role: 'Agent Bureautique & Impression Numérique', 
                             company: 'Best Graphic', 
                             desc: 'Gestion des services bureautiques et impression numérique.' 
@@ -98,10 +114,10 @@ const About: React.FC = () => {
                 </h3>
                 <div className="space-y-6 relative z-10">
                      {[
-                        { title: 'Licence Gestion & Administration des Entreprises', school: 'ESGAE (Accrédité CAMES)', year: '2020-2024', color: 'text-sky-400' },
-                        { title: 'BTSE Gestion des Ressources Humaines', school: 'ESGAE', year: '2020-2022', color: 'text-sky-400' },
+                        { title: 'Licence Gestion & Administration des Entreprises', school: 'ESGAE (Accrédité CAMES)', year: '2025', color: 'text-sky-400' },
+                        { title: 'BTSE Gestion des Ressources Humaines', school: 'ESGAE', year: '2023-2024', color: 'text-sky-400' },
+                        { title: 'Études de Droit', school: 'UMNG', year: '2021-2022', color: 'text-sky-400' },
                         { title: 'Baccalauréat Littéraire A4', school: 'Congo Brazzaville', year: '2020', color: 'text-sky-400' },
-                        { title: 'Études de Droit (2 ans)', school: 'UMNG', year: '2020-2022', color: 'text-sky-400' },
                     ].map((edu, idx) => (
                         <div key={idx} className="pb-4 border-b border-white/10 last:border-0 last:pb-0">
                             <h4 className={`font-bold ${edu.color}`}>{edu.title}</h4>

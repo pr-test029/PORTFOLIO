@@ -4,18 +4,18 @@ export const projects: Project[] = [
   {
     id: 1,
     title: 'Lamuka242',
-    shortDescription: 'Plateforme d\'engagement citoyen et d\'information.',
-    fullDescription: 'Lamuka242 est une solution numérique moderne dédiée à la sensibilisation et à la mobilisation. Elle centralise les informations essentielles et les ressources pour favoriser l\'éveil de la conscience collective et la participation active au développement local.',
-    pitch: 'Une solution numérique moderne dédiée à la sensibilisation et à la mobilisation.',
+    shortDescription: 'Institution de la société civile pour les droits des femmes vivant avec handicap.',
+    fullDescription: 'Le Collectif LAMUKA est une institution de la société civile congolaise pour les droits et l\'autonomisation des femmes vivant avec handicap en République du Congo. Elle est fondée sur les principes de l\'éthique, de l\'égalité et de l\'inclusion. Elle s\'engage dans le combat contre les multiples discriminations que subissent ces femmes, tant en raison de leur genre que de leur handicap.',
+    pitch: 'Défendre les droits et favoriser l\'autonomisation des femmes vivant avec handicap.',
     category: 'web',
-    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Netlify'],
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Netlify', 'Inclusion'],
     icon: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=800&auto=format&fit=crop',
     link: 'https://lamuka242.netlify.app',
     features: [
-      'Diffusion de Contenus : Système de gestion et d\'affichage d\'articles ou de communiqués thématiques.',
-      'Interface Responsive : Expérience utilisateur optimisée pour une consultation fluide sur mobile et desktop.',
-      'Interactivité : Intégration de formulaires ou de boutons d\'appel à l\'action pour engager la communauté.',
-      'Navigation Intuitive : Architecture de l\'information pensée pour un accès rapide aux sections clés du projet.'
+      'Plateforme d\'information et de sensibilisation sur les droits des femmes vivant avec handicap.',
+      'Outils d\'autonomisation et ressources pour l\'inclusion sociale.',
+      'Espace de lutte contre les discriminations basées sur le genre et le handicap.',
+      'Interface accessible et inclusive.'
     ],
     stack: {
       frontend: 'Développé avec React et TypeScript, garantissant une interface robuste, typée et performante.',
@@ -23,37 +23,38 @@ export const projects: Project[] = [
       other: ['Application Single Page (SPA) pour une navigation fluide sans rechargement de page.']
     },
     highlights: [
-      'Identité Visuelle Marquante : Utilisation de codes visuels forts en adéquation avec le message du projet.',
-      'Accessibilité : Lisibilité accrue et hiérarchie visuelle claire.',
-      'Performance : Optimisation des assets pour un affichage instantané.'
+      'Institution engagée pour l\'éthique, l\'égalité et l\'inclusion.',
+      'Combat contre les multiples discriminations.',
+      'Site web créé pour amplifier la voix et l\'impact du collectif.'
     ]
   },
   {
     id: 2,
     title: 'PR-Transcribe',
-    shortDescription: 'L\'outil ultime de numérisation et de conversion de documents.',
-    fullDescription: 'PR-Transcribe est une application de pointe capable d\'extraire le texte de n\'importe quel support visuel tout en préservant l\'intégrité de la mise en page originale, pour une transition fluide vers un format éditable.',
-    pitch: 'Donnez une seconde vie numérique à vos contenus, qu\'ils soient imprimés, audio ou manuscrits.',
+    shortDescription: 'Application intelligente de transcription de texte (manuscrit et numérique).',
+    fullDescription: 'PR-Transcribe est une application intelligente dédiée à la transcription de texte uniquement. Elle est capable de comprendre et de transcrire fidèlement le texte manuscrit et numérique. Elle reproduit avec précision la mise en forme originale (tableaux, styles de texte comme gras/italique, symboles mathématiques, scientifiques ou biologiques). Les fichiers transcrits peuvent être modifiés manuellement dans l\'application et exportés au format Word. Grâce à l\'IA, le processus de transcription est extrêmement rapide et peut traiter plusieurs fichiers simultanément.',
+    pitch: 'Transcription intelligente, rapide et fidèle de vos documents manuscrits et numériques.',
     category: 'app',
-    tags: ['React', 'TypeScript', 'AI/OCR', 'Deep Learning', 'Office API'],
+    tags: ['React', 'TypeScript', 'IA', 'OCR', 'Transcription'],
     icon: 'https://images.unsplash.com/photo-1568667256549-094345857637?q=80&w=800&auto=format&fit=crop',
     link: 'https://pr-transcribe.netlify.app/',
     features: [
-      'Reconnaissance Manuscrite (HTR) : Conversion de notes prises à la main en texte numérique.',
-      'Préservation de Mise en Forme : Capacité unique à conserver la structure du document source.',
-      'Moteur de Tableaux & Symboles : Extraction et reconstruction de tableaux complexes et formules mathématiques.',
-      'Export natif Microsoft Word (.docx) : Génération de fichiers entièrement modifiables.',
-      'Transcription Multimédia : Prise en charge des flux audio et vidéo.'
+      'Transcription intelligente de texte manuscrit et numérique.',
+      'Reproduction fidèle de la mise en forme (tableaux, styles, symboles).',
+      'Prise en charge de symboles mathématiques, scientifiques et biologiques.',
+      'Édition manuelle des textes transcrits.',
+      'Exportation au format Microsoft Word (.docx).',
+      'Traitement rapide par IA de plusieurs fichiers simultanément.'
     ],
     stack: {
-      frontend: 'Architecture React & TypeScript pour une interface de gestion de fichiers fluide.',
-      ai: 'Intégration de modèles d\'OCR et de Deep Learning pour le traitement des manuscrits.',
+      frontend: 'Architecture React & TypeScript pour une interface de gestion fluide.',
+      ai: 'Moteur d\'IA pour la transcription rapide et la reconnaissance de mise en forme.',
       deployment: 'Déploiement optimisé sur Netlify.'
     },
     highlights: [
-      'Fidélité de Rendu : Le document Word ressemble exactement à l\'image source.',
-      'Efficacité Professionnelle : Gain de temps massif pour les secteurs académiques et juridiques.',
-      'Interface Clean : Focus sur la zone de dépôt de fichiers.'
+      'Transcription fidèle et intelligente.',
+      'Gestion complexe de la mise en forme et des symboles.',
+      'Gain de temps grâce au traitement par IA multi-fichiers.'
     ]
   },
   {

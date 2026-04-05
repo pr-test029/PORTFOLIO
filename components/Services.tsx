@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Bot, Code, Palette, Users, Video, Map, ArrowUpRight, Cpu } from 'lucide-react';
 
 const Services: React.FC = () => {
@@ -49,7 +50,11 @@ const Services: React.FC = () => {
 
   const item = {
     hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 }
+    show: { 
+        opacity: 1, 
+        y: 0,
+        transition: { duration: 0.3, ease: "easeOut" }
+    }
   };
 
   return (
@@ -98,9 +103,9 @@ const Services: React.FC = () => {
                     
                     <div className="flex items-center justify-between border-t border-slate-200/50 pt-4">
                         <span className="text-sm font-semibold text-slate-400">Sur devis</span>
-                        <button className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 group-hover:bg-sky-500 group-hover:text-white transition-all">
+                        <Link to="/contact" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 group-hover:bg-sky-500 group-hover:text-white transition-all">
                             <ArrowUpRight size={20} />
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </motion.div>

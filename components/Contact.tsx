@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
                     {[
                         { icon: <Phone size={20} />, label: 'WhatsApp Direct', value: '+242 06 769 61 57', color: 'text-sky-600', bg: 'bg-sky-50' },
                         { icon: <Phone size={20} />, label: 'Numéro Agence', value: '+242 05 013 32 71', color: 'text-emerald-600', bg: 'bg-emerald-50' },
-                        { icon: <Mail size={20} />, label: 'Email', value: 'prtest029@gmail.com', color: 'text-indigo-600', bg: 'bg-indigo-50' }
+                        { icon: <Mail size={20} />, label: 'Email', value: 'paulndamba2@gmail.com', color: 'text-indigo-600', bg: 'bg-indigo-50' }
                     ].map((item, i) => (
                         <div key={i} className="flex items-center gap-5 group">
                             <div className={`p-4 ${item.bg} ${item.color} rounded-2xl group-hover:scale-110 transition-transform duration-300 shadow-sm`}>

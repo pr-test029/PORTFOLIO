@@ -37,7 +37,7 @@ const Home: React.FC = () => {
             <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
                 className="inline-flex items-center gap-2 px-4 py-2 bg-white/50 backdrop-blur-md text-sky-700 rounded-full text-sm font-semibold mb-6 border border-white/60 shadow-sm"
             >
                 <Sparkles size={16} className="text-yellow-500" />
@@ -45,9 +45,9 @@ const Home: React.FC = () => {
             </motion.div>
             
             <motion.h1 
-                initial={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-5xl lg:text-8xl font-black text-slate-800 mb-6 tracking-tight leading-[1.1]"
             >
                 NDAMBA <br/>
@@ -59,7 +59,7 @@ const Home: React.FC = () => {
             <motion.h2 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-2xl lg:text-3xl text-slate-600 font-medium mb-4 flex flex-col md:flex-row gap-2"
             >
                 <span>Expert RH & Gestion</span>
@@ -78,7 +78,7 @@ const Home: React.FC = () => {
             <motion.p 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
                 className="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed border-l-4 border-sky-500 pl-4"
             >
                 Je conçois des solutions numériques complètes alliant expertise en gestion des ressources humaines, management et développement Full Stack assisté par IA.
@@ -87,7 +87,7 @@ const Home: React.FC = () => {
             <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
                 className="flex flex-col sm:flex-row gap-4"
             >
                 <Link to="/portfolio" className="group bg-slate-900 text-white px-8 py-4 rounded-xl font-bold transition-all hover:bg-sky-600 hover:shadow-lg hover:shadow-sky-500/30 flex items-center justify-center gap-2">

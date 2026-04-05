@@ -39,7 +39,7 @@ const Skills: React.FC = () => {
       color: "from-purple-500 to-pink-500",
       skills: [
         { name: 'IA Générative (LLMs)', percentage: 95 },
-        { name: 'IA Agentique (Antigravity, Claude)', percentage: 90 },
+        { name: 'IA Agentique (Antigravity, Claude-code)', percentage: 95 },
       ]
     },
     {
@@ -47,7 +47,7 @@ const Skills: React.FC = () => {
       icon: <Palette className="text-white" size={20} />,
       color: "from-orange-500 to-red-400",
       skills: [
-        { name: 'Adobe Suite (PS, AI, PR, AE)', percentage: 85 },
+        { name: 'Adobe Suite (PS, AI, PR, AE)', percentage: 90 },
         { name: 'Canva (Maîtrise totale)', percentage: 100 },
       ]
     },
@@ -57,8 +57,8 @@ const Skills: React.FC = () => {
       color: "from-emerald-500 to-teal-400",
       skills: [
         { name: 'Gestion RH & Administration', percentage: 90 },
-        { name: 'Microsoft Office (Word, Excel, PPT)', percentage: 95 },
-        { name: 'Marketing Pratique', percentage: 85 },
+        { name: 'Microsoft Office (Word, Excel, PPT, Publisher)', percentage: 100 },
+        { name: 'Entrepreneuriat & Community Management', percentage: 90 },
       ]
     }
   ];
@@ -100,19 +100,31 @@ const Skills: React.FC = () => {
         ))}
       </div>
 
-      {/* Floating Tech Badges */}
-      <motion.div 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-        className="mt-16 flex flex-wrap justify-center gap-4 opacity-70"
-      >
-        {['React', 'TypeScript', 'Tailwind', 'Adobe Suite', 'Canva', 'IA Agentique', 'RH', 'Marketing'].map((tech, i) => (
-            <span key={i} className="px-4 py-2 bg-white rounded-full text-xs font-bold text-slate-400 shadow-sm border border-slate-100">
-                {tech}
-            </span>
+      {/* Animated Tech Badges */}
+      <div className="mt-16 overflow-hidden">
+        {[
+          ['React', 'TypeScript', 'Tailwind', 'Adobe Suite', 'Canva'],
+          ['IA Agentique', 'Microsoft Office', 'Community Management', 'Entrepreneuriat']
+        ].map((row, rowIndex) => (
+          <div key={rowIndex} className="flex overflow-hidden mb-4">
+            <motion.div 
+              className="flex gap-4"
+              animate={{ x: rowIndex % 2 === 0 ? ["0%", "-50%"] : ["-50%", "0%"] }}
+              transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+            >
+              {[...row, ...row].map((tech, i) => (
+                <motion.span 
+                  key={i} 
+                  whileHover={{ scale: 1.1, backgroundColor: "#f0f9ff", color: "#0284c7" }}
+                  className="px-6 py-3 bg-white rounded-full text-sm font-bold text-slate-600 shadow-md border border-slate-100 cursor-pointer whitespace-nowrap"
+                >
+                  {tech}
+                </motion.span>
+              ))}
+            </motion.div>
+          </div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 };
