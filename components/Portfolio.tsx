@@ -76,14 +76,16 @@ const Portfolio: React.FC = () => {
                     >
                         <Info size={16} /> Voir Plus
                     </button>
-                    <a 
-                      href={project.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="bg-sky-500 text-white px-6 py-3 rounded-full font-bold text-sm flex items-center gap-2 hover:bg-white hover:text-slate-900 transition-all hover:scale-105"
-                    >
-                        <ExternalLink size={16} /> Lancer l'App
-                    </a>
+                    {project.title !== 'PR-SCL' && project.title !== 'Powerful Reach' && (
+                        <a 
+                          href={project.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="bg-sky-500 text-white px-6 py-3 rounded-full font-bold text-sm flex items-center gap-2 hover:bg-white hover:text-slate-900 transition-all hover:scale-105"
+                        >
+                            <ExternalLink size={16} /> Lancer l'App
+                        </a>
+                    )}
                  </div>
               </div>
               
@@ -227,16 +229,18 @@ const Portfolio: React.FC = () => {
                       </div>
                     </div>
 
-                    <div className="pt-4">
-                      <a 
-                        href={selectedProject.link} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-full font-black text-sm hover:bg-sky-600 transition-all hover:scale-105 shadow-lg"
-                      >
-                        Lancer l'Application <ExternalLink size={16} />
-                      </a>
-                    </div>
+                    {selectedProject.title !== 'PR-SCL' && selectedProject.title !== 'Powerful Reach' && (
+                        <div className="pt-4">
+                          <a 
+                            href={selectedProject.link} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-full font-black text-sm hover:bg-sky-600 transition-all hover:scale-105 shadow-lg"
+                          >
+                            Lancer l'Application <ExternalLink size={16} />
+                          </a>
+                        </div>
+                    )}
                   </div>
                 </div>
               </div>
