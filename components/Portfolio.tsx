@@ -10,7 +10,11 @@ const Portfolio: React.FC = () => {
   const [filter, setFilter] = useState<'all' | 'web' | 'design' | 'chatbot' | 'app'>('all');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const filteredProjects = projects.filter(p => filter === 'all' || p.category === filter);
+  const filteredProjects = projects.filter(p => 
+    (filter === 'all' || p.category === filter) && 
+    p.title !== 'PR-SCL' && 
+    p.title !== 'Powerful Reach'
+  );
 
   // Prevent scroll when modal is open
   useEffect(() => {
@@ -76,16 +80,14 @@ const Portfolio: React.FC = () => {
                     >
                         <Info size={16} /> Voir Plus
                     </button>
-                    {project.title !== 'PR-SCL' && project.title !== 'Powerful Reach' && (
-                        <a 
-                          href={project.link} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="bg-sky-500 text-white px-6 py-3 rounded-full font-bold text-sm flex items-center gap-2 hover:bg-white hover:text-slate-900 transition-all hover:scale-105"
-                        >
-                            <ExternalLink size={16} /> Lancer l'App
-                        </a>
-                    )}
+                    <a 
+                      href={project.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="bg-sky-500 text-white px-6 py-3 rounded-full font-bold text-sm flex items-center gap-2 hover:bg-white hover:text-slate-900 transition-all hover:scale-105"
+                    >
+                        <ExternalLink size={16} /> Lancer l'App
+                    </a>
                  </div>
               </div>
               
@@ -229,18 +231,16 @@ const Portfolio: React.FC = () => {
                       </div>
                     </div>
 
-                    {selectedProject.title !== 'PR-SCL' && selectedProject.title !== 'Powerful Reach' && (
-                        <div className="pt-4">
-                          <a 
-                            href={selectedProject.link} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-full font-black text-sm hover:bg-sky-600 transition-all hover:scale-105 shadow-lg"
-                          >
-                            Lancer l'Application <ExternalLink size={16} />
-                          </a>
-                        </div>
-                    )}
+                    <div className="pt-4">
+                      <a 
+                        href={selectedProject.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-full font-black text-sm hover:bg-sky-600 transition-all hover:scale-105 shadow-lg"
+                      >
+                        Lancer l'Application <ExternalLink size={16} />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
